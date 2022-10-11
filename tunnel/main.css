@@ -1,0 +1,57 @@
+body {
+	background: #262626;
+	overflow: hidden;
+}
+#wrap {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1000px;
+	height: 1000px;
+	margin-left: -500px;
+	margin-top: -500px;
+	animation: rotate 100s linear infinite;
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+#wrap .gradient {
+	width: 2000px;
+	height: 2000px;
+	position: absolute;
+	left: -500px;
+	top: -500px;
+	background: radial-gradient(
+		closest-side,
+		rgba(38, 38, 38, 1),
+		rgba(38, 38, 38, 0)
+	);
+	z-index: 1;
+}
+#wrap svg {
+	width: 3000px;
+	margin-left: calc(-1500px + 50%);
+	margin-top: calc(-1500px + 50%);
+	opacity: 1;
+	position: absolute;
+	stroke: #fff;
+	stroke-width: 0.2px;
+	fill: none;
+}
+#wrap div.square {
+	position: absolute;
+	border: solid 4px #c0f;
+	transform: perspective(50px) translateZ(-1000px);
+	transition: transform 6s ease-in, opacity 6s ease-in;
+	z-index: 2;
+	opacity: 0;
+}
+#wrap div.square.zoom {
+	transform: perspective(50px) translateZ(51px);
+	opacity: 1;
+}

@@ -1,0 +1,22 @@
+#wrap {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	background: #262626;
+}
+#wrap > div {
+	border-radius: 2000px;
+	border: solid 1px rgba(255, 255, 255, 1);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transition: transform 100ms ease-in, left 500ms ease-out, top 500ms ease-out;
+}
+
+#controls {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	z-index: 100;
+}
